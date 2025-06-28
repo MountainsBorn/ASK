@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Kumar and Sons - Profit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-chart-line"></i> Ashok Kumar and Sons</h1>
+            <p>Profit Tracker - Track your daily revenue, expenses, commission and profit</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Simple Input Form -->
+            <div class="form-section">
+                <h2><i class="fas fa-plus-circle"></i> Add Daily Entry</h2>
+                <form id="profitForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="entryDate">Date</label>
+                            <input type="date" id="entryDate" name="entryDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="revenue">Revenue (₹)</label>
+                            <input type="number" id="revenue" name="revenue" placeholder="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commission">Commission (₹)</label>
+                            <input type="number" id="commission" name="commission" placeholder="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenses">Expenses (₹)</label>
+                            <input type="number" id="expenses" name="expenses" placeholder="0" step="0.01" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i> Save Entry
+                    </button>
+                </form>
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="summary-section">
+                <h2><i class="fas fa-chart-pie"></i> Profit Summary</h2>
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Revenue</h3>
+                            <p id="totalRevenue">₹0.00</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Commission</h3>
+                            <p id="totalCommission">₹0.00</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Expenses</h3>
+                            <p id="totalExpenses">₹0.00</p>
+                        </div>
+                    </div>
+                    <div class="summary-card highlight">
+                        <div class="card-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Net Profit</h3>
+                            <p id="netProfit">₹0.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Entries History -->
+            <div class="history-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-history"></i> Daily Entries</h2>
+                    <div class="header-buttons">
+                        <button id="exportBackup" class="btn-secondary" title="Export complete backup file">
+                            <i class="fas fa-download"></i> Backup
+                        </button>
+                        <button id="importBackup" class="btn-secondary" title="Import backup file">
+                            <i class="fas fa-upload"></i> Restore
+                        </button>
+                        <button id="exportCSV" class="btn-secondary">
+                            <i class="fas fa-file-csv"></i> Export CSV
+                        </button>
+                        <button id="clearHistory" class="btn-secondary">
+                            <i class="fas fa-trash"></i> Clear All
+                        </button>
+                    </div>
+                </div>
+                <div class="backup-status">
+                    <small id="backupStatus">Data automatically saved</small>
+                </div>
+                <div class="table-container">
+                    <table id="entriesTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Revenue (₹)</th>
+                                <th>Commission (₹)</th>
+                                <th>Expenses (₹)</th>
+                                <th>Profit (₹)</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="entriesBody">
+                            <!-- Entries will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

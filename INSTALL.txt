@@ -1,0 +1,57 @@
+ASHOK KUMAR AND SONS - PROFIT TRACKER
+==========================================
+
+QUICK INSTALLATION GUIDE
+========================
+
+STEP 1: DOWNLOAD FILES
+----------------------
+Make sure you have these 4 files in the same folder:
+✓ index.html
+✓ styles.css  
+✓ script.js
+✓ README.md
+
+STEP 2: OPEN APPLICATION
+------------------------
+1. Navigate to the folder containing the files
+2. Double-click on "index.html"
+3. The application will open in your web browser
+
+STEP 3: START USING
+-------------------
+1. Select today's date (or any date)
+2. Enter your revenue amount
+3. Enter commission amount  
+4. Enter expenses amount
+5. Click "Save Entry"
+
+THAT'S IT! Your data will be automatically saved.
+
+TROUBLESHOOTING
+===============
+
+❌ Application won't open?
+   → Make sure all 4 files are in the same folder
+   → Try opening in a different browser (Chrome recommended)
+
+❌ Data not saving?
+   → Check browser console (F12) for errors
+   → Try refreshing the page
+
+❌ Need help?
+   → Read README.md for detailed instructions
+   → Check browser console (F12) for error messages
+
+BACKUP YOUR DATA
+===============
+- Click "Backup" button monthly
+- Save the JSON file to your computer
+- Keep backup files in a safe location
+
+SUPPORT
+=======
+For technical issues, ensure all files are present and try a different browser.
+
+Developed for Ashok Kumar and Sons
+Version: 1.0 
