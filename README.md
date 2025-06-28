@@ -37,8 +37,8 @@ Download all these files to the same folder:
 ### **Adding Daily Entries**
 1. **Date**: Select the date for your entry
 2. **Revenue**: Enter total revenue amount
-3. **Commission**: Automatically set equal to expenses (cannot be edited)
-4. **Expenses**: Enter total expenses (commission will auto-update)
+3. **Commission**: Enter commission amount manually
+4. **Expenses**: Enter total expenses
 5. **Save**: Click "Save Entry" button
 
 ### **Understanding the Dashboard**

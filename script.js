@@ -152,8 +152,6 @@ function setupEventListeners() {
     const exportCSVBtn = document.getElementById('exportCSV');
     const exportBackupBtn = document.getElementById('exportBackup');
     const importBackupBtn = document.getElementById('importBackup');
-    const expensesInput = document.getElementById('expenses');
-    const commissionInput = document.getElementById('commission');
     
     if (profitForm) {
         profitForm.addEventListener('submit', handleEntrySubmit);
@@ -178,18 +176,6 @@ function setupEventListeners() {
     if (importBackupBtn) {
         importBackupBtn.addEventListener('click', importBackup);
         console.log('Import backup listener added');
-    }
-    
-    // Auto-set commission equal to expenses
-    if (expensesInput) {
-        expensesInput.addEventListener('input', function() {
-            const expensesValue = parseFloat(this.value) || 0;
-            if (commissionInput) {
-                commissionInput.value = expensesValue.toFixed(2);
-                console.log('Commission auto-set to:', expensesValue);
-            }
-        });
-        console.log('Expenses auto-commission listener added');
     }
 }
 
@@ -547,27 +533,27 @@ function addTestData() {
         {
             date: '2023-12-15',
             revenue: 10000,
-            commission: 500,
+            commission: 800,
             expenses: 2000,
-            profit: 500 - 2000,
+            profit: 800 - 2000,
             timestamp: new Date('2023-12-15T10:30:00').toISOString(),
             id: Date.now() + 1
         },
         {
             date: '2023-12-15',
             revenue: 8000,
-            commission: 400,
+            commission: 600,
             expenses: 1500,
-            profit: 400 - 1500,
+            profit: 600 - 1500,
             timestamp: new Date('2023-12-15T14:45:00').toISOString(),
             id: Date.now() + 2
         },
         {
             date: '2023-12-16',
             revenue: 12000,
-            commission: 600,
+            commission: 1000,
             expenses: 3000,
-            profit: 600 - 3000,
+            profit: 1000 - 3000,
             timestamp: new Date('2023-12-16T09:15:00').toISOString(),
             id: Date.now() + 3
         }

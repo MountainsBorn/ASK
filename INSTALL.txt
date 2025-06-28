@@ -22,8 +22,9 @@ STEP 3: START USING
 -------------------
 1. Select today's date (or any date)
 2. Enter your revenue amount
-3. Enter expenses amount (commission will auto-fill)
-4. Click "Save Entry"
+3. Enter commission amount
+4. Enter expenses amount
+5. Click "Save Entry"
 
 PROFIT CALCULATION: Commission - Expenses
 =========================================
