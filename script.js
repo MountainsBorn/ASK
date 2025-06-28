@@ -152,6 +152,8 @@ function setupEventListeners() {
     const exportCSVBtn = document.getElementById('exportCSV');
     const exportBackupBtn = document.getElementById('exportBackup');
     const importBackupBtn = document.getElementById('importBackup');
+    const expensesInput = document.getElementById('expenses');
+    const commissionInput = document.getElementById('commission');
     
     if (profitForm) {
         profitForm.addEventListener('submit', handleEntrySubmit);
@@ -176,6 +178,18 @@ function setupEventListeners() {
     if (importBackupBtn) {
         importBackupBtn.addEventListener('click', importBackup);
         console.log('Import backup listener added');
+    }
+    
+    // Auto-set commission equal to expenses
+    if (expensesInput) {
+        expensesInput.addEventListener('input', function() {
+            const expensesValue = parseFloat(this.value) || 0;
+            if (commissionInput) {
+                commissionInput.value = expensesValue.toFixed(2);
+                console.log('Commission auto-set to:', expensesValue);
+            }
+        });
+        console.log('Expenses auto-commission listener added');
     }
 }
 

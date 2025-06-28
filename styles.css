@@ -92,6 +92,19 @@ body {
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
+.form-group input[readonly] {
+    background: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+    border-color: #ced4da;
+}
+
+.form-group input[readonly]:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+    background: #e9ecef;
+}
+
 /* Buttons */
 .btn-primary {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
