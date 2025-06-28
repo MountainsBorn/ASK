@@ -217,7 +217,7 @@ function handleEntrySubmit(e) {
         revenue: revenue,
         commission: commission,
         expenses: expenses,
-        profit: revenue - commission - expenses,
+        profit: commission - expenses,
         timestamp: new Date().toISOString(),
         id: Date.now()
     };
@@ -253,7 +253,7 @@ function updateSummary() {
     const totalRevenue = entries.reduce((sum, e) => sum + e.revenue, 0);
     const totalCommission = entries.reduce((sum, e) => sum + e.commission, 0);
     const totalExpenses = entries.reduce((sum, e) => sum + e.expenses, 0);
-    const netProfit = entries.reduce((sum, e) => sum + e.profit, 0);
+    const netProfit = totalCommission - totalExpenses;
     
     console.log('Summary calculations:', { totalRevenue, totalCommission, totalExpenses, netProfit });
     
@@ -549,7 +549,7 @@ function addTestData() {
             revenue: 10000,
             commission: 500,
             expenses: 2000,
-            profit: 7500,
+            profit: 500 - 2000,
             timestamp: new Date('2023-12-15T10:30:00').toISOString(),
             id: Date.now() + 1
         },
@@ -558,7 +558,7 @@ function addTestData() {
             revenue: 8000,
             commission: 400,
             expenses: 1500,
-            profit: 6100,
+            profit: 400 - 1500,
             timestamp: new Date('2023-12-15T14:45:00').toISOString(),
             id: Date.now() + 2
         },
@@ -567,7 +567,7 @@ function addTestData() {
             revenue: 12000,
             commission: 600,
             expenses: 3000,
-            profit: 8400,
+            profit: 600 - 3000,
             timestamp: new Date('2023-12-16T09:15:00').toISOString(),
             id: Date.now() + 3
         }

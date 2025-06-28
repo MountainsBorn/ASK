@@ -45,7 +45,7 @@ Download all these files to the same folder:
 - **Total Revenue**: Sum of all revenue entries
 - **Total Commission**: Sum of all commission payments  
 - **Total Expenses**: Sum of all expenses
-- **Net Profit**: Revenue - Commission - Expenses
+- **Net Profit**: Commission - Expenses
 
 ### **Data Management**
 - **Backup**: Export complete data as JSON file

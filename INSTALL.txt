@@ -25,6 +25,9 @@ STEP 3: START USING
 3. Enter expenses amount (commission will auto-fill)
 4. Click "Save Entry"
 
+PROFIT CALCULATION: Commission - Expenses
+=========================================
+
 THAT'S IT! Your data will be automatically saved.
 
 TROUBLESHOOTING
